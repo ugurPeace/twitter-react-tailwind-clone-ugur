@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
-import RightBar from "./Rightbar/Rightbar";
+import RightBar from "./Rightbar/RightBar.jsx";
 
 function MainLayout() {
   return (
