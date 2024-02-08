@@ -24,22 +24,35 @@ const routes = createBrowserRouter([
         element: <Notifications />,
       },
       {
+        path: "messages",
+        element: <Notifications />,
+      },
+      {
+        path: "lists",
+        element: <Notifications />,
+      },
+      {
+        path: "bookmarks",
+        element: <Notifications />,
+      },
+      {
+        path: "premium",
+        element: <Notifications />,
+      },
+      {
+        path: "profile",
+        element: <Notifications />,
+      },
+      {
+        path: "more",
+        element: <Notifications />,
+      },
+
+      {
         path: "*",
         element: <Error />,
       },
     ],
-  },
-  {
-    path: "/explore",
-    element: <Explore />,
-  },
-  {
-    path: "/notifications",
-    element: <Notifications />,
-  },
-  {
-    path: "*",
-    element: <Error />,
   },
 ]);
 
