@@ -12,11 +12,11 @@ import { LiaBookmarkSolid } from "react-icons/lia";
 import { LiaBookmark } from "react-icons/lia";
 import { CgTwitter } from "react-icons/cg";
 import { CgProfile } from "react-icons/cg";
-import { CiCircleMore } from "react-icons/ci";
 
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import Button from "../../../../components/Button";
+import More from "./More";
 
 function Menu() {
   const notification = 2;
@@ -155,14 +155,7 @@ function Menu() {
           </div>
         )}
       </NavLink>
-      <button className="py-1 block group">
-        <div className="p-2 transition-colors rounded-full inline-flex items-center gap-4  group-hover:bg-[#eff3f41a]">
-          <span>
-            <CiCircleMore size={26} />
-          </span>
-          <span className="pr-4 text-lg tracking-wide">More</span>
-        </div>
-      </button>
+      <More />
       <div className="py-4 w-[90%]">
         <Button size="large">Post</Button>
       </div>
