@@ -27,7 +27,7 @@ function More() {
       <Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-black  shadow-box rounded-xl overflow-hidden">
         <button className="px-4 h-14 transition-colors w-full  inline-flex items-center gap-5  hover:bg-[#eff3f41a]">
           <span>
-            <FiAtSign size={26} />
+            <FiAtSign size={24} />
           </span>
           <span className="pr-4 text-lg tracking-wide font-semibold">
             Connect
@@ -35,12 +35,13 @@ function More() {
         </button>
         <button className="px-4 h-14 transition-colors w-full  inline-flex items-center gap-5 hover:bg-[#eff3f41a]">
           <span>
-            <CiMoneyBill size={26} />
+            <CiMoneyBill size={24} />
           </span>
           <span className="pr-4 text-lg tracking-wide font-semibold">
             Monetization
           </span>
         </button>
+        <div className="h-px bg-[#2f3336]  w-[89%] mx-auto" />
         <Disclosure>
           {({ open }) => (
             <>
@@ -50,7 +51,7 @@ function More() {
                   <IoIosArrowDown
                     size={20}
                     className={classNames("transition-all", {
-                      "rotate-180": open,
+                      "rotate-180 text-[#1d9bf0]": open,
                     })}
                   />
                 </span>
@@ -71,69 +72,85 @@ function More() {
           )}
         </Disclosure>
         <Disclosure>
-          <Disclosure.Button className="h-[52px] flex items-center justify-between transition-colors w-full hover:bg-[#eff3f41a] px-4 font-semibold">
-            Professional tools
-            <span className="">
-              <IoIosArrowDown size={20} />
-            </span>
-          </Disclosure.Button>
-          <Disclosure.Panel className="text-white">
-            <Link
-              to="/"
-              className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
-            >
-              <span>
-                <CgArrowTopRightR />
-              </span>
-              <span>Ads</span>
-            </Link>
-          </Disclosure.Panel>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="h-[52px] flex items-center justify-between transition-colors w-full hover:bg-[#eff3f41a] px-4 font-semibold">
+                Professional tools
+                <span className="">
+                  <IoIosArrowDown
+                    size={20}
+                    className={classNames("transition-all", {
+                      "rotate-180 text-[#1d9bf0]": open,
+                    })}
+                  />
+                </span>
+              </Disclosure.Button>
+              <Disclosure.Panel className="text-white">
+                <Link
+                  to="/"
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
+                >
+                  <span>
+                    <CgArrowTopRightR />
+                  </span>
+                  <span>Ads</span>
+                </Link>
+              </Disclosure.Panel>
+            </>
+          )}
         </Disclosure>
         <Disclosure>
-          <Disclosure.Button className="h-[52px] flex items-center justify-between transition-colors w-full hover:bg-[#eff3f41a] px-4 font-semibold">
-            Settings and support
-            <span className="">
-              <IoIosArrowDown size={20} />
-            </span>
-          </Disclosure.Button>
-          <Disclosure.Panel className="text-white">
-            <Link
-              to="/"
-              className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
-            >
-              <span>
-                <IoIosSettings />
-              </span>
-              <span>Settings and privacy</span>
-            </Link>
-            <Link
-              to="/"
-              className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
-            >
-              <span>
-                <IoMdHelpCircleOutline />
-              </span>
-              <span>Help center</span>
-            </Link>
-            <Link
-              to="/"
-              className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
-            >
-              <span>
-                <IoBrushSharp />
-              </span>
-              <span>Display</span>
-            </Link>
-            <Link
-              to="/"
-              className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
-            >
-              <span>
-                <CgShortcut />
-              </span>
-              <span>Keyboard shortcuts</span>
-            </Link>
-          </Disclosure.Panel>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="h-[52px] flex items-center justify-between transition-colors w-full hover:bg-[#eff3f41a] px-4 font-semibold">
+                Settings and support
+                <IoIosArrowDown
+                  size={20}
+                  className={classNames("transition-all", {
+                    "rotate-180 text-[#1d9bf0]": open,
+                  })}
+                />
+              </Disclosure.Button>
+              <Disclosure.Panel className="text-white">
+                <Link
+                  to="/"
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
+                >
+                  <span>
+                    <IoIosSettings />
+                  </span>
+                  <span>Settings and privacy</span>
+                </Link>
+                <Link
+                  to="/"
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
+                >
+                  <span>
+                    <IoMdHelpCircleOutline />
+                  </span>
+                  <span>Help center</span>
+                </Link>
+                <Link
+                  to="/"
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
+                >
+                  <span>
+                    <IoBrushSharp />
+                  </span>
+                  <span>Display</span>
+                </Link>
+                <Link
+                  to="/"
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors"
+                >
+                  <span>
+                    <CgShortcut />
+                  </span>
+                  <span>Keyboard shortcuts</span>
+                </Link>
+              </Disclosure.Panel>
+            </>
+          )}
         </Disclosure>
       </Popover.Panel>
     </Popover>

@@ -158,6 +158,7 @@ function Menu() {
       <More />
       <div className="py-4 w-[90%]">
         <Button size="large">Post</Button>
+        {/*Instead of New Component / Ugur */}
       </div>
     </nav>
   );
